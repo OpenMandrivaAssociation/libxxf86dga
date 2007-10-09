@@ -19,7 +19,7 @@ BuildRoot:	%{_tmppath}/%{name}-root
 
 BuildRequires:	libx11-devel >= 1.0.0
 BuildRequires:	libxext-devel >= 1.0.0
-BuildRequires:	x11-proto-devel >= 1.0.0
+BuildRequires:	x11-proto-devel >= 1.4.0
 BuildRequires:	x11-util-macros >= 1.0.1
 
 %description
