@@ -1,6 +1,6 @@
 %define name		libxxf86dga
 %define version		1.0.2
-%define release		%mkrel 5
+%define release		%mkrel 6
 
 %define major		1
 %define libname		%mklibname xxf86dga %{major}
