@@ -1,6 +1,6 @@
 %define name		libxxf86dga
-%define version		1.0.2
-%define release		%mkrel 6
+%define version		1.1.1
+%define release		%mkrel 1
 
 %define major		1
 %define libname		%mklibname xxf86dga %{major}
@@ -19,7 +19,7 @@ BuildRoot:	%{_tmppath}/%{name}-root
 
 BuildRequires: libx11-devel >= 1.0.0
 BuildRequires: libxext-devel >= 1.0.0
-BuildRequires: x11-proto-devel >= 1.4.0
+BuildRequires: x11-proto-devel >= 7.5
 BuildRequires: x11-util-macros >= 1.0.1
 
 %description
@@ -44,11 +44,12 @@ Summary: Development files for %{name}
 Group: Development/X11
 
 Requires: %{libname} >= %{version}
-Requires: x11-proto-devel >= 1.0.0
+Requires: x11-proto-devel >= 7.5
 Provides: %{name}-devel = %{version}-%{release}
 Obsoletes: %{mklibname xxf86dga 1 -d}
 
 Conflicts: libxorg-x11-devel < 7.0
+Conflicts: x11-proto-devel < 7.5
 
 %description -n %{develname}
 Development files for %{name}
@@ -58,6 +59,7 @@ Development files for %{name}
 %{_libdir}/libXxf86dga.so
 %{_libdir}/libXxf86dga.la
 %{_libdir}/pkgconfig/xxf86dga.pc
+%{_includedir}/X11/extensions/*.h
 %{_mandir}/man3/XDGA*.3*
 %{_mandir}/man3/XF86DGA.3*
 %{_mandir}/man3/XFree86-DGA.3*
