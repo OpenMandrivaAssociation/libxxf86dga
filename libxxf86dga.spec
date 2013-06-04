@@ -1,11 +1,11 @@
-%define major		1
-%define libname		%mklibname xxf86dga %{major}
-%define develname	%mklibname xxf86dga -d
+%define major 1
+%define libname %mklibname xxf86dga %{major}
+%define develname %mklibname xxf86dga -d
 
 Name:		libxxf86dga
 Summary:	XFree86 Direct Graphics Access Extension Library
-Version:	1.1.3
-Release:	2
+Version:	1.1.4
+Release:	1
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
@@ -40,7 +40,7 @@ Conflicts:	libxorg-x11-devel < 7.0
 Conflicts:	x11-proto-devel < 7.5
 
 %description -n %{develname}
-Development files for %{name}
+Development files for %{name}.
 
 %prep
 %setup -qn libXxf86dga-%{version}
@@ -54,7 +54,6 @@ Development files for %{name}
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %files -n %{libname}
