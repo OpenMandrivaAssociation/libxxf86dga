@@ -12,8 +12,8 @@ Url:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXxf86dga-%{version}.tar.bz2
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xext)
-BuildRequires:	x11-proto-devel >= 7.5
-BuildRequires:	x11-util-macros >= 1.0.1
+BuildRequires:	pkgconfig(xorg-macros) >= 1.0.1
+BuildRequires:	pkgconfig(xproto)
 
 %description
 XFree86 Direct Graphics Access Extension Library.
@@ -30,8 +30,6 @@ Summary:	Development files for %{name}
 Group:		Development/X11
 Requires:	%{libname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
-Obsoletes:	%{_lib}xxf86dga1-devel < 1.1.3
-Obsoletes:	%{_lib}xxf86dga-static-devel < 1.1.3
 
 %description -n %{devname}
 Development files for %{name}.
