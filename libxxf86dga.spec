@@ -5,7 +5,7 @@
 Summary:	XFree86 Direct Graphics Access Extension Library
 Name:		libxxf86dga
 Version:	1.1.4
-Release:	3
+Release:	4
 License:	MIT
 Group:		Development/X11
 Url:		http://xorg.freedesktop.org
