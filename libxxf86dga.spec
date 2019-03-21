@@ -4,8 +4,8 @@
 
 Summary:	XFree86 Direct Graphics Access Extension Library
 Name:		libxxf86dga
-Version:	1.1.4
-Release:	15
+Version:	1.1.5
+Release:	1
 License:	MIT
 Group:		Development/X11
 Url:		http://xorg.freedesktop.org
@@ -35,18 +35,18 @@ Provides:	%{name}-devel = %{version}-%{release}
 Development files for %{name}.
 
 %prep
-%setup -qn libXxf86dga-%{version}
+%autosetup -n libXxf86dga-%{version} -p1
 
 %build
-%configure2_5x \
+%configure \
 	--disable-static \
 	--x-includes=%{_includedir} \
 	--x-libraries=%{_libdir}
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files -n %{libname}
 %{_libdir}/libXxf86dga.so.%{major}*
@@ -58,4 +58,3 @@ Development files for %{name}.
 %{_mandir}/man3/XDGA*.3*
 %{_mandir}/man3/XF86DGA.3*
 %{_mandir}/man3/XFree86-DGA.3*
-
