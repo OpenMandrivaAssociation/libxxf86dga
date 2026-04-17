@@ -1,3 +1,4 @@
+%undefine _debugsource_packages
 %define major 1
 %define libname %mklibname xxf86dga %{major}
 %define devname %mklibname xxf86dga -d
@@ -10,11 +11,7 @@ License:	MIT
 Group:		Development/X11
 Url:		https://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXxf86dga-%{version}.tar.xz
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	libtool-base
-BuildRequires:	slibtool
-BuildRequires:	make
+BuildRequires:	meson
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xext)
 BuildRequires:	pkgconfig(xorg-macros) >= 1.0.1
@@ -43,15 +40,12 @@ Development files for %{name}.
 %autosetup -n libXxf86dga-%{version} -p1
 
 %build
-%configure \
-	--disable-static \
-	--x-includes=%{_includedir} \
-	--x-libraries=%{_libdir}
+%meson
 
-%make_build
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %files -n %{libname}
 %{_libdir}/libXxf86dga.so.%{major}*
