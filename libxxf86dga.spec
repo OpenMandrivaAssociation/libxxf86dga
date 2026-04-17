@@ -54,7 +54,7 @@ Development files for %{name}.
 %make_install
 
 %files -n %{libname}
-%{_libdir}/libXxf86dga.so.%{major}*
+#{_libdir}/libXxf86dga.so.%{major}*
 
 %files -n %{devname}
 %{_libdir}/libXxf86dga.so
