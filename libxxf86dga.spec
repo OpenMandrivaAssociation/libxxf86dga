@@ -1,3 +1,4 @@
+%undefine _debugsource_packages
 %define major 1
 %define libname %mklibname xxf86dga %{major}
 %define devname %mklibname xxf86dga -d
