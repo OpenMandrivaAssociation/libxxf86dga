@@ -57,7 +57,7 @@ Development files for %{name}.
 #{_libdir}/libXxf86dga.so.%{major}*
 
 %files -n %{devname}
-%{_libdir}/libXxf86dga.so
+#{_libdir}/libXxf86dga.so
 %{_libdir}/pkgconfig/xxf86dga.pc
 %{_includedir}/X11/extensions/*.h
 %doc %{_mandir}/man3/XDGA*.3*
